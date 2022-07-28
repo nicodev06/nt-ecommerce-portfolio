@@ -103,6 +103,7 @@ export default {
         const url = 'https://stripe-server-nt.herokuapp.com/create-checkout-session';
         const items = this.productsList;
         const product = [items.find((item) => item._id === this.product._id),]; 
+        product[0].quantity = this.quantity;
         const stripe = await getStripe();
         const response = await fetch(url, {
             method: 'POST',
