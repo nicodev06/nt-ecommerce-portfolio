@@ -110,7 +110,7 @@ export default {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 },
-            body: JSON.stringify(product)
+            body: JSON.stringify([product,])
         });
         if(response.statusCode === 500) return;
         const data = await response.json();
