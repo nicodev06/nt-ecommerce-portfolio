@@ -100,7 +100,7 @@ export default {
         this.$store.commit('onAdd', [this.product, this.quantity]);
       },
       async buyNow(){
-        const url = 'https://git.heroku.com/stripe-server-nt.git/create-checkout-session';
+        const url = 'https://stripe-server-nt.herokuapp.com/create-checkout-session';
         const items = this.$store.state.cartItems;
         const product = [items.find((item) => item._id === this.product._id),]; 
         const stripe = await getStripe();
