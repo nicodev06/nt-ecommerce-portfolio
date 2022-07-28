@@ -87,7 +87,7 @@ export default {
             this.$store.commit('onRemove', id);
         },
         async handleCheckout(){
-            const url =  'https://git.heroku.com/stripe-server-nt.git/create-checkout-session';
+            const url =  'https://stripe-server-nt.herokuapp.com/create-checkout-session';
             const stripe = await getStripe();
             const items = this.$store.state.cartItems;
             const response = await fetch(url, {
