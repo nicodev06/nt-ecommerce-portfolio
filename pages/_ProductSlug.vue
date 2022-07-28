@@ -101,7 +101,7 @@ export default {
       },
       async buyNow(){
         const url = 'https://stripe-server-nt.herokuapp.com/create-checkout-session';
-        const items = client.fetch(`*[_type == 'product']`);
+        const items = this.productList;
         const product = [items.find((item) => item._id === this.product._id),]; 
         const stripe = await getStripe();
         const response = await fetch(url, {
@@ -123,7 +123,6 @@ export default {
        const productsQuery = `*[_type == 'product' ]`;
        this.product = await client.fetch(singeProductQuery);
        this.productsList = await client.fetch(productsQuery);
-       console.log(this.product);
     },
     fetchOnServer: false,
 }
