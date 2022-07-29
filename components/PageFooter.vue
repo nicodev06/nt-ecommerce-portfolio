@@ -4,6 +4,7 @@
         <p>
             <i class="pi pi-instagram"></i>
             <i class="pi pi-twitter"></i>
+            <i class="pi pi-github"></i>
         </p>
     </div>
 </template>

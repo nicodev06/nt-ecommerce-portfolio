@@ -1,7 +1,7 @@
 <template>
     <div class="navbar-container">
         <p class="logo">
-           NT Headphones 
+           NT Headphones
         </p>
         <button
         type="button"
